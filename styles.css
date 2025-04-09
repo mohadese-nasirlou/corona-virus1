@@ -204,6 +204,7 @@ img {
 .yellow{
     color: rgb(253, 216, 53);
     font-weight: bolder;
+    font-size: 1.2em;
 }
 .recovered{
 
@@ -259,9 +260,10 @@ img {
     color: rgb(2, 232, 163);
 }
 .chart-content{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 5rem 0rem;
+  gap: 1rem;
 }
 .chart1,
 .chart2,
@@ -319,15 +321,14 @@ img {
     gap: 30px;    
 }
 @media (max-width: 768px) {
-    .chart-content{
-        flex-direction: column;
-        align-items: center;
-    }
+  .chart-content {
+      grid-template-columns: 1fr;
+  }
+}
     .chart1,
     .chart2{
         width: 100%;
     }
-}
 .orders-country{
     background: #fff;
     border-radius: 20px;
@@ -586,132 +587,39 @@ th , td{
   .orders-main::-webkit-scrollbar-thumb {
     border-radius: 4px;
   }
-  @media (max-width: 768px) {
-    .your-element {
-      flex-direction: column;
-      padding: 1rem;
+  
 
-    }
-  }
-  @media (max-width: 768px) {
-    .menu {
-      flex-direction: column;
-      font-size: 14px;
-    }
-  
-    .hero-image {
-      height: 200px;
-    }
-  }
-  @media (max-width: 768px) {
-    .section-head {
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
-    }
-    .head-menu {
-      flex-direction: column;
-      gap: 15px;
-    }
-  }
-  @media (max-width: 768px) {
-    .corona-section {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      text-align: center;
-    }
-  
-    .dr-img {
-      height: 250px;
-      width: auto;
-    }
-  
-    .corona-buttons {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  @media (max-width: 768px) {
-    .section-statistic {
-      flex-direction: column;
-      gap: 30px;
-    }
-  
-    .selectors {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-  
-    .information {
-      flex-direction: column;
-      gap: 15px;
-      text-align: center;
-    }
-  }
-  @media (max-width: 768px) {
-    .orders-head {
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-    }
-  }
-  @media (max-width: 768px) {
-    .blog-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .blog-container > div {
-      height: 250px;
-    }
-  }
-  @media (max-width: 768px) {
-    .section-footer {
-      flex-direction: column;
-      gap: 30px;
-      text-align: center;
-    }
-  
-    .menu-aboutus {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .footer-buttons {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
-  @media (max-width: 768px) {
-    .orders-country {
-      overflow-x: auto !important;
-      white-space: nowrap;
-    }
-  
-    .orders-country table {
-      min-width: 600px;
-    }
-  }
-  @media (max-width: 768px) {
 
-  }
-  body {
+
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    .orders-main {
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    .orders-main table {
+        min-width: 600px; 
+    }
+}
+
+body, html {
+  overflow-x: hidden; 
+}
+
+
+
+
+
+
+
+body {
   overflow-x: hidden;
-
-
-.orders-country {
-  overflow-x: auto;
-}
-.orders-country {
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-}
-.orders-country table {
-  min-width: 800px;
-  white-space: normal;
 }
 
 html, body {
@@ -719,183 +627,137 @@ html, body {
   min-height: 100vh;
   overflow-y: auto;
 }
+
+
 .orders-country {
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
 }
+
 .orders-country table {
   min-width: 800px;
   white-space: normal;
 }
+
+
+@media (max-width: 768px) {
+  
+  .menu {
+    flex-direction: column;
+    font-size: 14px;
   }
-  @media (max-width: 768px) {
-    .chart-content {
-      flex-direction: column;
-      align-items: center;
-    }
+
   
-    .chart1,
-    .chart2 {
-      width: 100%;
-    }
-  
-    .section-head {
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
-    }
-  
-    .head-menu {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
+  .hero-image {
+    height: 200px;
   }
-  .orders-country {
-    white-space: normal;
-    overflow-x: visible;
+
+  
+  .section-head {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+
+  .corona-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .dr-img {
+    height: 250px;
+    width: auto;
+  }
+
+  .corona-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  
+  .section-statistic {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .selectors {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .information {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+
+  .orders-head {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-container > div {
+    height: 250px;
+  }
+
+  
+  .section-footer {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .menu-aboutus {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  
+  .chart-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart1, .chart2 {
+    width: 100%;
   }
   
-  @media (max-width: 768px) {
-    .orders-country {
-      overflow-x: auto;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-      scroll-behavior: smooth;
-    }
   
-    .orders-country table {
-      min-width: 800px;
-    }
-  
-
-
-
-
-
-  @media (max-width: 768px) {
-    .orders-country {
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .orders-country table {
-        min-width: 600px;
-    }
-
-    .chart-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .chart1, .chart2 {
-        width: 100%;
-    }
-
-    .section-head {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .head-menu {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .corona-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .dr-img {
-        height: 250px;
-        width: auto;
-    }
-
-    .corona-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .section-statistic {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .selectors {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .information {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .orders-head {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .blog-container {
-        grid-template-columns: 1fr;
-    }
-
-    .blog-container > div {
-        height: 250px;
-    }
-
-    .section-footer {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .menu-aboutus {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .footer-buttons,
+  .selector-information {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 }
-  }
-  @media {
-    .footer-buttons,
-    .selector-information {
-      text-align: center;
+
+
+@media (max-width: 768px) {
+  .section-statistic {
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      gap: 30px;
       justify-content: center;
-    }
   }
-
-  @media (max-width: 768px) {
-    .section-statistic {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        justify-content: center;
-    }
 }
 
 
-
-
-
-
-
-
-
-  
-  
