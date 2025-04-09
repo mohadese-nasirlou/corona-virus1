@@ -761,3 +761,73 @@ html, body {
 }
 
 
+
+
+@media (max-width: 768px) {
+  .orders-country {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
+  
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .orders-country table {
+    min-width: 800px;
+
+    width: max-content;
+  }
+}
+
+.orders-country {
+  padding: 20px !important;
+}
+
+.orders-country {
+  overflow-x: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .orders-country {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.orders-country{
+  overflow-x: auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+.orders-country table{
+  min-width: 600px;
+  width: 100%;
+  padding: 0 16px;
+}
+.orders-country th,
+.orders-country td{
+  padding: 12px 8px;
+  white-space: nowrap;
+}
+
+@mwdia (max-width: 768px) {
+  .orders-country {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+.orders-main table{
+  min-width: 500px;
+}
+.orders-main{
+  overflow-x: auto;
+  padding: 8px;
+  box-sizing: border-box;
+}
