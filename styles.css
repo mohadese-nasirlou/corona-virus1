@@ -552,6 +552,11 @@ th , td{
     gap: 25px;
     margin-bottom: 30px;
   }
+  @media (max-width: 768px) {
+    .footer-send-btn{
+      margin-bottom: 30px;
+    }
+  }
   .email-input{
     background-image: url(https://icongr.am/clarity/email.svg?size=22&color=b0bec5);
     background-repeat: no-repeat;
